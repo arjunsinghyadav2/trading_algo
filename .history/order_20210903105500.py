@@ -47,15 +47,15 @@ new_limit_order = {
     ]
 }
 
-#Place the order and grab the order id
-order_response = TDSession.place_order(account=TD_ACCOUNT, order = limit_order)
-order_id = order_response['order_id']
-pprint.pprint(order_response)
+# #Place the order and grab the order id
+# order_response = TDSession.place_order(account=TD_ACCOUNT, order = limit_order)
+# order_id = order_response['order_id']
+# pprint.pprint(order_response)
 
-#Modify an existing order
-modified_order_response = TDSession.modify_order(account=TD_ACCOUNT, order = new_limit_order,order_id=order_id)
-modified_order_id = modified_order_response['order_id']
-pprint.pprint(modified_order_response)
+# #Modify an existing order
+# modified_order_response = TDSession.modify_order(account=TD_ACCOUNT, order = new_limit_order,order_id=order_id)
+# modified_order_id = modified_order_response['order_id']
+# pprint.pprint(modified_order_response)
 
 
 #Cancel an existing order

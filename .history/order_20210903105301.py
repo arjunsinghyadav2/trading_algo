@@ -15,7 +15,7 @@ limit_order = {
     "orderType" : "LIMIT",
     "session" : "NORMAL",
     "duration" : "DAY",
-    "price" : 8.0,
+    "price" : 8.5,
     "orderStrategyType" : "SINGLE",
     "orderLegCollection" : [
         {
@@ -33,7 +33,7 @@ new_limit_order = {
     "orderType" : "LIMIT",
     "session" : "NORMAL",
     "duration" : "DAY",
-    "price" : 9.5,
+    "price" : 8.2,
     "orderStrategyType" : "SINGLE",
     "orderLegCollection" : [
         {
