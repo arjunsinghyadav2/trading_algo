@@ -41,10 +41,10 @@ TDSession.login()
 # dji_mover = TDSession.get_movers(market = '$DJI', direction = 'up', change = 'value')
 # print(dji_mover)
 
-# #Get minute data
-# minute_data = TDSession.get_price_history(
-#     symbol='MSFT', period_type='day', period=5, frequency_type='minute', frequency=30)
-# pprint.pprint(minute_data)
+#Get minute data
+minute_data = TDSession.get_price_history(
+    symbol='MSFT', period_type='day', period=10, frequency_type='minute', frequency=30)
+pprint.pprint(minute_data)
 
 # # Six month worth of daily data
 # daily_data = TDSession.get_price_history(
