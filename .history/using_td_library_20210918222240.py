@@ -10,7 +10,7 @@ config.read(r'C:\Users\ArjunSingh\Desktop\trade\configs\config.ini')
 CONSUMER_KEY = config.get('main', 'CLIENT_ID')
 REDIRECT_URI = config.get('main', 'REDIRECT_URI')
 CREDENTIALS_PATH = config.get('main', 'JSON_PATH')
-TD_ACCOUNT = config.get('main', 'TD_ACCOUNT')
+TD_ACCOUNT = config.get('main', 'ACCOUNT_NUMBER')
 
 #create a new instance of the client
 TDSession = TDClient(client_id=CONSUMER_KEY,

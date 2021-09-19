@@ -5,7 +5,7 @@ from configparser import ConfigParser
 
 # Grab configuration values.
 config = ConfigParser()
-config.read(r'C:\Users\ArjunSingh\Desktop\trade\configs\config.ini')
+config.read('configs/config.ini')
 
 CONSUMER_KEY = config.get('main', 'CLIENT_ID')
 REDIRECT_URI = config.get('main', 'REDIRECT_URI')

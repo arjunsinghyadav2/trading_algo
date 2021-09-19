@@ -1,3 +1,5 @@
+from config import CONSUMER_KEY, REDIRECT_URI, JSON_PATH
+from arjun import TD_ACCOUNT
 from td.client import TDClient
 import pprint
 from datetime import datetime, timedelta
@@ -5,12 +7,12 @@ from configparser import ConfigParser
 
 # Grab configuration values.
 config = ConfigParser()
-config.read(r'C:\Users\ArjunSingh\Desktop\trade\configs\config.ini')
+config.read('configs/config.ini')
 
 CONSUMER_KEY = config.get('main', 'CLIENT_ID')
 REDIRECT_URI = config.get('main', 'REDIRECT_URI')
 CREDENTIALS_PATH = config.get('main', 'JSON_PATH')
-TD_ACCOUNT = config.get('main', 'TD_ACCOUNT')
+ACCOUNT_NUMBER = config.get('main', 'ACCOUNT_NUMBER')
 
 #create a new instance of the client
 TDSession = TDClient(client_id=CONSUMER_KEY,
