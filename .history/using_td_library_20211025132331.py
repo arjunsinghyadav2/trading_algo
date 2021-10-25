@@ -1,11 +1,23 @@
-from config import CONSUMER_KEY, REDIRECT_URI, JSON_PATH
-from arjun import TD_ACCOUNT
 from td.client import TDClient
 import pprint
 from datetime import datetime, timedelta
+from configparser import ConfigParser
+
+#TODO
+#adding commets
+
+# Grab configuration values.
+config = ConfigParser()
+config.read(r'C:\Users\ArjunSingh\Desktop\trade\configs\config.ini')
+
+CONSUMER_KEY = config.get('main', 'CLIENT_ID')
+REDIRECT_URI = config.get('main', 'REDIRECT_URI')
+CREDENTIALS_PATH = config.get('main', 'JSON_PATH')
+TD_ACCOUNT = config.get('main', 'TD_ACCOUNT')
 
 #create a new instance of the client
-TDSession = TDClient(client_id = CONSUMER_KEY, redirect_uri = REDIRECT_URI, credentials_path = JSON_PATH)
+TDSession = TDClient(client_id=CONSUMER_KEY,
+                     redirect_uri=REDIRECT_URI, credentials_path=CREDENTIALS_PATH)
 
 #login into a new session
 TDSession.login()
@@ -41,10 +53,10 @@ TDSession.login()
 # dji_mover = TDSession.get_movers(market = '$DJI', direction = 'up', change = 'value')
 # print(dji_mover)
 
-# #Get minute data
-# minute_data = TDSession.get_price_history(
-#     symbol='MSFT', period_type='day', period=5, frequency_type='minute', frequency=30)
-# pprint.pprint(minute_data)
+#Get minute data
+minute_data = TDSession.get_price_history(
+    symbol='MSFT', period_type='day', period=10, frequency_type='minute', frequency=30)
+pprint.pprint(minute_data)
 
 # # Six month worth of daily data
 # daily_data = TDSession.get_price_history(

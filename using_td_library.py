@@ -3,6 +3,9 @@ import pprint
 from datetime import datetime, timedelta
 from configparser import ConfigParser
 
+#TODO
+#adding commets
+
 # Grab configuration values.
 config = ConfigParser()
 config.read(r'C:\Users\ArjunSingh\Desktop\trade\configs\config.ini')
